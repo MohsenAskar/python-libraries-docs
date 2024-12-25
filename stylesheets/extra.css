@@ -1,0 +1,30 @@
+.avatar {
+    position: absolute;
+    right: 20px;  /* Distance from right edge */
+    top: 46px;    /* Distance from top */
+    width: 45px;  /* Avatar size */
+    height: 45px;
+    border-radius: 50%;
+    z-index: 2000; /* Make sure it's above other elements */
+    #box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: adds a subtle shadow */
+}
+
+/* For dark mode */
+[data-md-color-scheme="slate"] .avatar {
+    box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+}
+
+/* For mobile screens */
+@media screen and (max-width: 768px) {
+    .avatar {
+        right: 20px;
+        top: 15px;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Adjust the main title to not overlap with avatar */
+.wy-side-nav-search > a {
+    margin-right: 60px;
+}
