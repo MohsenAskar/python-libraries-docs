@@ -1,0 +1,69 @@
+site_name: Python Libraries developed by Mohsen Askar
+site_url: https://mohsenaskar.github.io/python-libraries-docs/
+
+theme:
+  name: material 
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: orange
+      toggle:
+        icon: material/weather-sunny
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: orange
+      toggle:
+        icon: material/weather-night
+  font:
+    text: Open Sans
+    code: JetBrains Mono
+
+  custom_dir: overrides
+  
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.expand    # Add this line for expandable sections
+    - navigation.top
+    - search.highlight
+    - search.share
+    - toc.integrate       # Add this for integrated table of contents
+    - toc.follow          # Table of contents follows scroll
+    - navigation.sections # This enables section grouping
+
+
+extra_css:
+  - stylesheets/extra.css
+
+
+nav:
+  - Home: index.md
+  - 🛠️📦 Modularity Encoding: 
+      - Overview: modularity_encoding/index.md
+      - Usage Guide: modularity_encoding/usage.md
+      - API Reference: modularity_encoding/api.md
+  - 📊 Stata Codebook:
+      - Overview: stata_codebook/index.md
+      - Usage Guide: stata_codebook/usage.md
+      - API Reference: stata_codebook/api.md
+  - 🖥️ My DataViewer GUI:
+      - Overview: mydataviewer-GUI/index.md
+      - Usage Guide: mydataviewer-GUI/usage.md
+      - API Reference: mydataviewer-GUI/api.md
+  - 👮‍♂️⭐ Assumption Sheriff:
+      - Overview: assumption_sheriff/index.md
+      - Usage Guide: assumption_sheriff/usage.md
+      - API Reference: assumption_sheriff/api.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - admonition
+  - pymdownx.details
+
+plugins:
+  - search

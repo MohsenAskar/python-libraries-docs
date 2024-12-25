@@ -1,0 +1,71 @@
+docs-project/
+├── mkdocs.yml              # Main configuration file (theme, navigation, plugins)
+├── docs/                   # Main documentation content folder
+│   ├── index.md           # Homepage content
+│   ├── assets/            # Folder for images and other static files
+│   │   └── avatar.jpg     # Your profile picture for the top-right corner
+│   ├── stylesheets/       # Custom CSS folder
+│   │   └── extra.css      # Custom styles (avatar positioning, etc.)
+│   ├── modularity_encoding/    # Documentation for Modularity Encoding package
+│   │   ├── index.md           # Overview and introduction
+│   │   ├── usage.md           # Usage examples and tutorials
+│   │   └── api.md             # API reference and function documentation
+│   ├── stata_codebook/        # Documentation for Stata Codebook package
+│   │   ├── index.md           # Overview and introduction
+│   │   ├── usage.md           # Usage examples and tutorials
+│   │   └── api.md             # API reference and function documentation
+│   ├── mydataviewer-GUI/      # Documentation for DataViewer GUI package
+│   │   ├── index.md           # Overview and introduction
+│   │   ├── usage.md           # Usage examples and tutorials
+│   │   └── api.md             # API reference and function documentation
+│   └── assumption_sheriff/     # Documentation for Assumption Sheriff package
+│       ├── index.md           # Overview and introduction
+│       ├── usage.md           # Usage examples and tutorials
+│       └── api.md             # API reference and function documentation
+├── overrides/              # Theme customization folder
+│   └── main.html          # Custom template for adding avatar to header
+└── site/                  # Generated site folder (created after build)
+    └── ...                # Contains the built HTML files and assets
+
+
+To run the website locally
+-------------------------------
+mkdocs serve
+
+To Deploy on GitHub
+-----------------
+1. Open GitBash
+-------------
+cd "path/to/docs-projects"
+git init
+
+2. Go to Github and create a new reposirtory: lets say name it "python-libraries-docs" (Don't initialize it with README or .gitignore)
+---------------------------------------------
+3. on Git bash type (while stil in the project path)
+--------------------------------------------------
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/YourUsername/your-repo-name.git
+git push -u origin main
+
+4. In the cmd type
+----------------------
+mkdocs gh-deploy
+
+5. if you made some changes and want to upload to Github again:
+---------------------------------------------------------------------
+git add .
+git commit -m "Fixed avatar image path and configuration"
+git push origin main
+
+then: mkdocs gh-deploy in the cmd
+
+6. if you encounter an error:
+-----------------------------------
+either to force your local version using : git push -f origin main
+
+or to pull: git pull origin main 
+and push again : git add .
+git commit -m "Fixed avatar image path and configuration"
+git push origin main
