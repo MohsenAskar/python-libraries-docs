@@ -1,5 +1,8 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<div>
+    <img src="https://static.pepy.tech/badge/assumption-sheriff" alt="Total downloads"/>
+</div>
 
 `AssumptionSheriff` is a comprehensive Python package designed to validate statistical test assumptions. It provides automated checking of common statistical assumptions and offers recommendations when assumptions are violated. The packges supports 16 commonly used statistical tests, more tests will be added in the coming package updates.
 
@@ -58,6 +61,3 @@ More tests to be added in future vesrions.
     }
     ```
 
-<div>
-    <img src="https://static.pepy.tech/badge/assumption-sheriff" alt="Total downloads"/>
-</div>

@@ -2,10 +2,13 @@
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<div>
+    <img src="https://static.pepy.tech/badge/stata_codebook" alt="Total downloads"/>
+</div>
 
-# `stata_codebook` Package
+# `stata_codebook`
 
-The `Codebook Package` package provides tools for generating detailed descriptive statistics and summaries of data frames, similar to Stata's `codebook` command. `codebook` command is a very useful command to examine dataset varaibles. 
+The `stata_codebook` package provides tools for generating detailed descriptive statistics and summaries of data frames, similar to Stata's `codebook` command. `codebook` command is a very useful command to examine dataset varaibles. 
 In Stata documentation "`codebook` examines the data in producing its results. For variables that codebook thinks are
 continuous, it presents the mean; the standard deviation; and the 10th, 25th, 50th, 75th, and 90th
 percentiles. For variables that it thinks are categorical, it presents a tabulation.".
@@ -72,6 +75,3 @@ Developed by: Mohsen Askar <ceaser198511@gmail.com>
     ```
 
 
-<div>
-    <img src="https://static.pepy.tech/badge/stata_codebook" alt="Total downloads"/>
-</div>
