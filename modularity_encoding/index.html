@@ -829,6 +829,10 @@
 <h2 id="summary">Summary</h2>
 <p><a href="https://www.python.org/downloads/"><img alt="Python 3.8+" src="https://img.shields.io/badge/python-3.8+-blue.svg" /></a>
 <a href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a></p>
+<div>
+    <img src="https://static.pepy.tech/badge/modularity-encoding" alt="Total downloads"/>
+</div>
+
 <p>The <strong><code>modularity_encoding</code></strong> package provides functionality for grouping high dimensional Health Coding Systems (HCSs). In the medical domain, these code systems can be challenging to handle in big datasets while implementing machine learning model for classification or prediction purposes. Examples of these code systems are International Classification of Diseases (ICD) codes, Anatomical Therapeutic Chemical (ATC) codes, Diseases Related Group (DRG) codes, etc. These code systems include thousands of codes and binarizing them in many columns will greatly increase the sparsity of the dataset leading to worse model performances. More specifically, the package includes functions for creating a network of code systems on the co-occurrences of the code systems codes in the dataset population, then, detecting communities(modules) within the network. These modules are a way to group the codes in a clinically-relevant and data-driven way. After that, the package provide a new column which assigns the code system codes to their corresponding community modules. By this way, the model dimensions will be significantly reduced  form thousands to a handful number of dimensions.</p>
 <h2 id="key-features">Key Features</h2>
 <ul>
@@ -836,9 +840,6 @@
 <li><strong>Community Detection</strong>: It identifies communities (or modules) within the network. These communities group the HCSs codes in a way that is both clinically relevant and data-driven, enhancing the interpretability and utility of the codes.</li>
 <li><strong>Dimensionality Reduction</strong>: By assigning codes to their respective community modules, <strong><code>modularity_encoding</code></strong> significantly reduces the dimensionality of the data—from potentially thousands of columns to just a few. This reduction helps in managing dataset sparsity and improving model performance.</li>
 </ul>
-<div>
-    <img src="https://static.pepy.tech/badge/modularity-encoding" alt="Total downloads"/>
-</div>
 
 
 
