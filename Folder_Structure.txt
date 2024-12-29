@@ -59,7 +59,7 @@ mkdocs gh-deploy
 5. if you made some changes and want to upload to Github again:
 ---------------------------------------------------------------------
 git add .
-git commit -m "Fixed avatar image path and configuration"
+git commit -m "Fixed avatar image path and configuration (OR ANY REASON)"
 git push origin main
 
 then: mkdocs gh-deploy in the cmd
