@@ -64,3 +64,10 @@ Inspired by the Stata `browser`,`My DataViewer` is a lightweight, interactive da
 | **Console integration**             | No embedded console                              | No embedded console                              | **Yes**, embedded IPython console for live data manipulation |
 | **Custom themes**                   | No                                                | No                                                | **Yes**, switchable light/dark themes and custom fonts     |
 | **Jupyter integration**             | No                                                | No                                                | **Yes**, updates Jupyter kernel namespace if running inside Jupyter   |
+
+
+
+
+<div>
+    <img src="https://static.pepy.tech/badge/mydataviewer-GUI" alt="Total downloads"/>
+</div>

@@ -3,7 +3,10 @@ docs-project/
 ├── docs/                   # Main documentation content folder
 │   ├── index.md           # Homepage content
 │   ├── assets/            # Folder for images and other static files
-│   │   └── avatar.jpg     # Your profile picture for the top-right corner
+│   │   └── img
+│   │    │   └── avatar.jpg     # Your profile picture for the top-right corner
+│   │    └── js
+│   │         └── visit_counter.js  # to add visitor counter of the site
 │   ├── stylesheets/       # Custom CSS folder
 │   │   └── extra.css      # Custom styles (avatar positioning, etc.)
 │   ├── modularity_encoding/    # Documentation for Modularity Encoding package

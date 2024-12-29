@@ -4,3 +4,8 @@
 <img src="{{ config.site_url }}assets/img/avatar.JPG" alt="Mohsen Askar" class="avatar" onerror="this.style.display='none'">
 {{ super() }}
 {% endblock %}
+
+{% block footer %}
+{{ super() }}
+<script defer src="{{ config.site_url }}assets/js/visit-counter.js"></script>
+{% endblock %}

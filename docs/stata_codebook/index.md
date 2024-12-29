@@ -70,3 +70,8 @@ Developed by: Mohsen Askar <ceaser198511@gmail.com>
         url = {https://pypi.org/project/stata_codebook/}
     }
     ```
+
+
+<div>
+    <img src="https://static.pepy.tech/badge/stata_codebook" alt="Total downloads"/>
+</div>

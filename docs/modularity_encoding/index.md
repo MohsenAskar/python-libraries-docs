@@ -10,3 +10,8 @@ The **`modularity_encoding`** package provides functionality for grouping high d
 - **Network Creation**: The package creates a network from the HCSs codes based on their co-occurrences within a dataset.
 - **Community Detection**: It identifies communities (or modules) within the network. These communities group the HCSs codes in a way that is both clinically relevant and data-driven, enhancing the interpretability and utility of the codes.
 - **Dimensionality Reduction**: By assigning codes to their respective community modules, **`modularity_encoding`** significantly reduces the dimensionality of the data—from potentially thousands of columns to just a few. This reduction helps in managing dataset sparsity and improving model performance.
+
+
+<div>
+    <img src="https://static.pepy.tech/badge/modularity-encoding" alt="Total downloads"/>
+</div>

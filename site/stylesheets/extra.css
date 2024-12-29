@@ -28,3 +28,72 @@
 .wy-side-nav-search > a {
     margin-right: 60px;
 }
+
+/* Keep your existing avatar styles */
+
+/* Add visitor counter styles */
+.visitor-counter {
+    position: fixed;
+    bottom: 3rem;
+    left: 1rem;
+    z-index: 100;
+    font-family: monospace;
+}
+
+.counter-container {
+    background: linear-gradient(to bottom, #2c3e50, #34495e);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.counter-label {
+    color: #ecf0f1;
+    font-size: 12px;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.counter-display {
+    display: flex;
+    gap: 2px;
+}
+
+.counter-digit {
+    background: #000;
+    color: #2ecc71;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+    font-family: 'Digital', monospace;
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] .counter-container {
+    background: linear-gradient(to bottom, #1a202c, #2d3748);
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    .visitor-counter {
+        bottom: 0.5rem;
+        left: 0.5rem;
+    }
+    .counter-digit {
+        font-size: 14px;
+        padding: 3px 4px;
+    }
+}
+
+.package-stats {
+    margin: 1rem 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.package-stats img {
+    height: 20px;
+}

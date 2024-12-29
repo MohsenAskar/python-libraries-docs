@@ -58,3 +58,6 @@ More tests to be added in future vesrions.
     }
     ```
 
+<div>
+    <img src="https://static.pepy.tech/badge/assumption-sheriff" alt="Total downloads"/>
+</div>
