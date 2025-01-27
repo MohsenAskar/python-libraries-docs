@@ -6,10 +6,12 @@
 Generates a detailed codebook for a given DataFrame/variable in the dataframe, providing descriptive statistics and data quality checks.
 
 **Parameters:**
+
 - `df` (pandas.DataFrame): The DataFrame to analyze.
 - `column` (str, optional): If specified, only this column will be analyzed. Defaults to `None`.
 - `advanced` (bool, optional): If `True`, includes additional statistics like standard deviation, confidence intervals, and normality tests. Defaults to `False`.
 - `decimal_places` (int, optional): The number of decimal places to round numerical results. Defaults to 3.
+
 
 **Returns:**
 - pandas.DataFrame: A DataFrame containing the codebook with descriptive statistics and data quality checks.

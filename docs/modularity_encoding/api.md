@@ -438,16 +438,5 @@ The size of the dataset that can be analyzed will depend on the hardware availab
 You can use the `assign_module` function to map the code to its correpoding module interger id (corresponds to the encdoing number of this code). The code entered must be a string value and must have been in the original dataset.
 
 
-## License
 
-Released under the MIT License:
-Copyright (C) 2024 modularity_encoding
-
-Developed by: Mohsen Askar <ceaser198511@gmail.com>
-
-## Citation
-
-If you use `modularity_encoding` in your research, we would appreciate a citation to this paper:
-
-*“Using Network Analysis Modularity to Group Health Code Systems and Decrease Dimensionality in Machine Learning Models”* [https://doi.org/10.1016/j.rcsop.2024.100463](https://doi.org/10.1016/j.rcsop.2024.100463)
 

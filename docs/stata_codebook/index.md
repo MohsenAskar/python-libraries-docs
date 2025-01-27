@@ -1,12 +1,12 @@
 # Overview
 
+# `Stata Codebook`Package 📊
+
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-<div>
-    <img src="https://static.pepy.tech/badge/stata_codebook" alt="Total downloads"/>
-</div>
+[![Total downloads](https://static.pepy.tech/badge/stata_codebook)](https://pepy.tech/projects/stata_codebook?timeRange=threeMonths&category=version&includeCIDownloads=true&granularity=daily&viewType=chart&versions)
 
-# `stata_codebook`
+
 
 The `stata_codebook` package provides tools for generating detailed descriptive statistics and summaries of data frames, similar to Stata's `codebook` command. `codebook` command is a very useful command to examine dataset varaibles. 
 In Stata documentation "`codebook` examines the data in producing its results. For variables that codebook thinks are
@@ -57,7 +57,7 @@ While pandas offers built-in functions like `describe()` and `value_counts()` fo
 
 ## License
 
-Released under the MIT License: For more details, see the `LICENSE` file in the repository.
+Released under the MIT License: For more details, see the `LICENSE` file.
 Copyright (C) 2024 **`stata_codebook`**
 
 Developed by: Mohsen Askar <ceaser198511@gmail.com>

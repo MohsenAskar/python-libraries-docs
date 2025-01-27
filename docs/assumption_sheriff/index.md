@@ -1,8 +1,10 @@
+# Overview
+# `Assumption Sheriff` Package 👮‍♂️⭐
+
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-<div>
-    <img src="https://static.pepy.tech/badge/assumption-sheriff" alt="Total downloads"/>
-</div>
+[![Total downloads](https://static.pepy.tech/badge/assumption-sheriff)](https://pepy.tech/projects/assumption-sheriff?timeRange=threeMonths&category=version&includeCIDownloads=true&granularity=daily&viewType=chart&versions)
+
 
 `AssumptionSheriff` is a comprehensive Python package designed to validate statistical test assumptions. It provides automated checking of common statistical assumptions and offers recommendations when assumptions are violated. The packges supports 16 commonly used statistical tests, more tests will be added in the coming package updates.
 
@@ -14,7 +16,7 @@ Unfortunately, it is quite common that published health research do not fully re
 [https://doi.org/10.1590/S1806-37562018000000303](https://doi.org/10.1590/S1806-37562018000000303)
 
 - Nielsen et. al (2019) "Assessing assumptions for statistical analyses in randomised clinical trials"
-[https://doi-org.mime.uit.no/10.1136/bmjebm-2019-111174](https://doi-org.mime.uit.no/10.1136/bmjebm-2019-111174)
+[https://doi.org/10.1136/bmjebm-2019-111174](https://doi.org/10.1136/bmjebm-2019-111174)
 
 To bridge this gap, `Assumption Sheriff`  automates the process of checking statistical test assumptions, providing clear feedback and suggestions for alternative approaches when violations occur.
 

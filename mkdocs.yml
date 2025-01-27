@@ -56,6 +56,14 @@ nav:
       - Overview: assumption_sheriff/index.md
       - Usage Guide: assumption_sheriff/usage.md
       - API Reference: assumption_sheriff/api.md
+  - 🤖 DataInsightron:
+      - Overview: data_insightron/index.md
+      - Usage Guide: data_insightron/usage.md
+      - API Reference: data_insightron/api.md
+  - 🔊🗂️ Audio2Topics:
+      - Overview: audio2topics/index.md
+      - Usage Guide: audio2topics/usage.md
+      - API Reference: audio2topics/api.md
 
 markdown_extensions:
   - pymdownx.highlight:

@@ -1,10 +1,10 @@
-## ` My DataViewer` package overview 
+# Overview
+
+# ` My DataViewer` Package 🖥️
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-<div>
-    <img src="https://static.pepy.tech/badge/mydataviewer-GUI" alt="Total downloads"/>
-</div>
+[![Total downloads](https://static.pepy.tech/badge/mydataviewer_GUI)](https://pepy.tech/projects/mydataviewer_GUI?timeRange=threeMonths&category=version&includeCIDownloads=true&granularity=daily&viewType=chart&versions)
 
 **`My DataViewer` : A Lightweight Real-Time Interactive Data Viewer IDE for Python**
 
@@ -40,19 +40,9 @@ Inspired by the Stata `browser`,`My DataViewer` is a lightweight, interactive da
 | **Filtering/Subset view**       | Yes, allows viewing subsets of variables/rows     | Requires filtering beforehand, not interactive   |
 | **Customizable views**          | Yes, can display specific columns/rows            | Requires code to subset data, then view          |
 | **Viewer format**               | Standalone window (outside the main Stata UI)     | Integrated as a tab within RStudio               |"
-**A quick comaprison between Stata `browse` and RStudio `View()`**
-
-| Feature                        | **Stata browse**                                | **RStudio View()**                              |
-|:---------------------------------|:--------------------------------------------------|:--------------------------------------------------|
-| **Real-time reflection of changes** | **Yes** — automatically updates with changes     | **No** — requires a manual refresh (View() again) |
-| **Read-Only by default**        | Yes (but can switch to edit mode)               | Yes (no edit mode available)                   |
-| **Interactive editing**         | Yes, if you switch to edit mode                 | No                                               |
-| **Filtering/Subset view**       | Yes, allows viewing subsets of variables/rows     | Requires filtering beforehand, not interactive   |
-| **Customizable views**          | Yes, can display specific columns/rows            | Requires code to subset data, then view          |
-| **Viewer format**               | Standalone window (outside the main Stata UI)     | Integrated as a tab within RStudio               |"
 
 
-## A comparison with Stata `browse` and RStudio `View()` commands
+## A comparison with Stata `browse`, RStudio `View()`, and `My DataViewer`
 
 | Feature                             | **Stata `browse`**                                | **RStudio `View()`**                              | **`My DataViewer` package**                                      |
 |:------------------------------------|:-------------------------------------------------|:-------------------------------------------------|:---------------------------------------------------------|
@@ -69,4 +59,9 @@ Inspired by the Stata `browser`,`My DataViewer` is a lightweight, interactive da
 
 
 
+## License
 
+Released under the MIT License:
+Copyright (C) 2024 `mydataviewer-GUI`
+
+Developed by: Mohsen Askar  <ceaser198511@gmail.com>
