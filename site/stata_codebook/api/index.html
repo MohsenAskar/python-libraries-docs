@@ -307,6 +307,46 @@
   
 
       
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../data_insightron/" class="md-tabs__link">
+          
+  
+    
+  
+  🤖 DataInsightron
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../audio2topics/" class="md-tabs__link">
+          
+  
+    
+  
+  🔊🗂️ Audio2Topics
+
+        </a>
+      </li>
+    
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -896,6 +936,228 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../data_insightron/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    🤖 DataInsightron
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            🤖 DataInsightron
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_insightron/usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_insightron/api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../audio2topics/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    🔊🗂️ Audio2Topics
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            🔊🗂️ Audio2Topics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audio2topics/usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audio2topics/api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -916,11 +1178,13 @@
 <h3 id="detailed-function-documentation">Detailed Function Documentation</h3>
 <h5 id="function-codebook">Function: <code>codebook</code></h5>
 <p>Generates a detailed codebook for a given DataFrame/variable in the dataframe, providing descriptive statistics and data quality checks.</p>
-<p><strong>Parameters:</strong>
-- <code>df</code> (pandas.DataFrame): The DataFrame to analyze.
-- <code>column</code> (str, optional): If specified, only this column will be analyzed. Defaults to <code>None</code>.
-- <code>advanced</code> (bool, optional): If <code>True</code>, includes additional statistics like standard deviation, confidence intervals, and normality tests. Defaults to <code>False</code>.
-- <code>decimal_places</code> (int, optional): The number of decimal places to round numerical results. Defaults to 3.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>df</code> (pandas.DataFrame): The DataFrame to analyze.</li>
+<li><code>column</code> (str, optional): If specified, only this column will be analyzed. Defaults to <code>None</code>.</li>
+<li><code>advanced</code> (bool, optional): If <code>True</code>, includes additional statistics like standard deviation, confidence intervals, and normality tests. Defaults to <code>False</code>.</li>
+<li><code>decimal_places</code> (int, optional): The number of decimal places to round numerical results. Defaults to 3.</li>
+</ul>
 <p><strong>Returns:</strong>
 - pandas.DataFrame: A DataFrame containing the codebook with descriptive statistics and data quality checks.</p>
 <p><strong>Example Usage:</strong></p>

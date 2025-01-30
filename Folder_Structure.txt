@@ -39,7 +39,7 @@ To Deploy on GitHub
 -----------------
 1. Open GitBash
 -------------
-cd "path/to/docs-projects"
+cd "path/to/docs-projects" (between qoutations"") 
 git init
 
 2. Go to Github and create a new reposirtory: lets say name it "python-libraries-docs" (Don't initialize it with README or .gitignore)

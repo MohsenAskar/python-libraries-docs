@@ -1,5 +1,6 @@
 
 ## Functions Overview
+![svg](modularity_encoding package_smaller.svg)
 
 The **`modularity_encoding`** package comprises **One** main function and **five** supplementary functions. These functions can either be used together in a pipeline for detailed control and inspection or executed all at once using the main function for convenience.
 
