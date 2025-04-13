@@ -1528,16 +1528,6 @@
 <li>Select one or more audio files (supported formats: MP3, WAV, M4A, FLAC)</li>
 <li>Selected files will appear in the file list on the left panel</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Code example for loading files programmatically</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">core.transcriber</span> <span class="kn">import</span> <span class="n">Transcriber</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">transcriber</span> <span class="o">=</span> <span class="n">Transcriber</span><span class="p">()</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">audio_files</span> <span class="o">=</span> <span class="p">{}</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Read file content</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;example.mp3&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">audio_files</span><span class="p">[</span><span class="s2">&quot;example.mp3&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</code></pre></div>
 <h3 id="selecting-transcription-options">Selecting Transcription Options</h3>
 <ol>
 <li>Choose a Whisper model from the dropdown:</li>
@@ -1569,14 +1559,6 @@
 <li>Selected device (GPU is significantly faster)</li>
 <li>System specifications</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Code example for starting transcription programmatically</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">worker</span> <span class="o">=</span> <span class="n">transcriber</span><span class="o">.</span><span class="n">transcribe_files</span><span class="p">(</span><span class="n">audio_files</span><span class="p">,</span> <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;medium&quot;</span><span class="p">)</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Connect to signals</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">worker</span><span class="o">.</span><span class="n">progress_updated</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">update_progress</span><span class="p">)</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">worker</span><span class="o">.</span><span class="n">transcription_completed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">handle_completed</span><span class="p">)</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">worker</span><span class="o">.</span><span class="n">error_occurred</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">handle_error</span><span class="p">)</span>
-</code></pre></div>
 <h3 id="viewing-and-saving-transcriptions">Viewing and Saving Transcriptions</h3>
 <ol>
 <li>After transcription completes, select a file from the list to view its transcription</li>
@@ -1584,10 +1566,6 @@
 <li>Choose a location and filename in the save dialog</li>
 <li>The transcription will be saved as a plain text file</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Code example for saving transcriptions programmatically</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">transcriptions</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;example.mp3&quot;</span><span class="p">:</span> <span class="s2">&quot;This is the transcribed text.&quot;</span><span class="p">}</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">saved_files</span> <span class="o">=</span> <span class="n">transcriber</span><span class="o">.</span><span class="n">save_transcriptions</span><span class="p">(</span><span class="n">transcriptions</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="s2">&quot;./output&quot;</span><span class="p">)</span>
-</code></pre></div>
 <h2 id="whisper-models">Whisper Models</h2>
 <table>
 <thead>

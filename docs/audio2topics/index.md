@@ -131,21 +131,15 @@ Audio2Topics relies on several key libraries:
 
 ### Installation Steps
 
-1. **Install the package**
+ **Install the package**
    ```
    pip install audio2topics
    ```
 
-2. **Install required language models**
-   ```
-   python -m spacy download en_core_web_sm
-   python -m nltk.downloader punkt stopwords
-   ```
-
-3. **Configure API Keys (Optional)**
+ **Configure API Keys (Optional)**
    - For LLM topic refinement, configure OpenAI or Anthropic API keys in the settings
 
-4. **Launch the application**
+ **Launch the application**
    - In the terminal, activate the enviroments where the packages is installed and type:
 
    ```
