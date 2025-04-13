@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mohsenaskar.github.io/python-libraries-docs/stata_codebook/api/">
+        <link rel="canonical" href="https://mohsenaskar.github.io/python-libraries-docs/audio2topics/text_processor/">
       
       
-        <link rel="prev" href="../usage/">
+        <link rel="prev" href="../transcriber/">
       
       
-        <link rel="next" href="../../mydataviewer-GUI/">
+        <link rel="next" href="../topic_modeler/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>API Reference - Python Libraries developed by Mohsen Askar</title>
+        <title>Process Text - Python Libraries developed by Mohsen Askar</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#detailed-function-documentation" class="md-skip">
+        <a href="#text-processing-module" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API Reference
+              Process Text
             
           </span>
         </div>
@@ -248,13 +248,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../stata_codebook/" class="md-tabs__link">
           
   
     
@@ -330,11 +328,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../audio2topics/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -517,8 +517,6 @@
       
   
   
-    
-  
   
   
     
@@ -535,24 +533,23 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../stata_codebook/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -563,13 +560,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             📊 Stata Codebook
@@ -585,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/" class="md-nav__link">
+      <a href="../../stata_codebook/usage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -603,28 +600,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    API Reference
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../stata_codebook/api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -633,75 +612,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#detailed-function-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Detailed Function Documentation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Detailed Function Documentation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#function-codebook" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function: codebook
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#output-explanation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Output Explanation:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#faqtroubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      FAQ/Troubleshooting
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1051,6 +961,8 @@
       
   
   
+    
+  
   
   
     
@@ -1075,23 +987,24 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../audio2topics/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1102,13 +1015,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             🔊🗂️ Audio2Topics
@@ -1124,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../audio2topics/transcriber/" class="md-nav__link">
+      <a href="../transcriber/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1142,10 +1055,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../audio2topics/text_processor/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Process Text
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1154,6 +1087,308 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textprocessor-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      TextProcessor Class
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TextProcessor Class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textprocessorworker-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      TextProcessorWorker Class
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TextProcessorWorker Class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-text-processing-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Text Processing Functions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-processing-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text Processing Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI Components
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entering-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entering Text
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processing Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-csv-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with CSV Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-text-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Text Statistics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#language-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Language Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#currently-supported-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Currently Supported Languages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language-specific-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language-Specific Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-for-effective-text-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips for Effective Text Processing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips for Effective Text Processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domain-specific-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain-Specific Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-issues-and-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues and Solutions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csv-import-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSV Import Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processing Performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language-support-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language Support Limitations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1166,7 +1401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../audio2topics/topic_modeler/" class="md-nav__link">
+      <a href="../topic_modeler/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1187,7 +1422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../audio2topics/validator/" class="md-nav__link">
+      <a href="../validator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1208,7 +1443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../audio2topics/visualizer/" class="md-nav__link">
+      <a href="../visualizer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1229,7 +1464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../audio2topics/compare_models/" class="md-nav__link">
+      <a href="../compare_models/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1265,113 +1500,339 @@
                   
 
 
-  <h1>API Reference</h1>
-
-<h3 id="detailed-function-documentation">Detailed Function Documentation</h3>
-<h5 id="function-codebook">Function: <code>codebook</code></h5>
-<p>Generates a detailed codebook for a given DataFrame/variable in the dataframe, providing descriptive statistics and data quality checks.</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>df</code> (pandas.DataFrame): The DataFrame to analyze.</li>
-<li><code>column</code> (str, optional): If specified, only this column will be analyzed. Defaults to <code>None</code>.</li>
-<li><code>advanced</code> (bool, optional): If <code>True</code>, includes additional statistics like standard deviation, confidence intervals, and normality tests. Defaults to <code>False</code>.</li>
-<li><code>decimal_places</code> (int, optional): The number of decimal places to round numerical results. Defaults to 3.</li>
-</ul>
-<p><strong>Returns:</strong>
-- pandas.DataFrame: A DataFrame containing the codebook with descriptive statistics and data quality checks.</p>
-<p><strong>Example Usage:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Generate an advanced codebook for a specific column</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">codebook</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">advanced</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">decimal_places</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Variable</th>
-      <th>Type</th>
-      <th>Unique values</th>
-      <th>Missing values</th>
-      <th>Blank issues</th>
-      <th>Range</th>
-      <th>25th percentile</th>
-      <th>50th percentile (Median)</th>
-      <th>75th percentile</th>
-      <th>Mean</th>
-      <th>Examples</th>
-      <th>Top categories</th>
-      <th>SD</th>
-      <th>95% CI</th>
-      <th>Normality test</th>
-      <th>p-value (normality)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>age</td>
-      <td>float64</td>
-      <td>4</td>
-      <td>1</td>
-      <td>Not applicable</td>
-      <td>(25.0, 40.0)</td>
-      <td>28.75</td>
-      <td>32.5</td>
-      <td>36.25</td>
-      <td>32.5</td>
-      <td>[35.0, 25.0, 30.0]</td>
-      <td>-</td>
-      <td>6.45</td>
-      <td>(26.18, 38.82)</td>
-      <td>Shapiro-Wilk</td>
-      <td>0.97</td>
-    </tr>
-  </tbody>
+<h1 id="text-processing-module">Text Processing Module</h1>
+<h2 id="overview">Overview</h2>
+<p>The Text Processing module prepares raw text for topic modeling by cleaning, normalizing, and standardizing content. This critical step transforms unstructured text into a suitable format for analysis, helping to produce more coherent and meaningful topic clusters.</p>
+<p>This module allows you to:
+- Process text from multiple sources (direct input, text files, CSV files, and Word documents)
+- Clean text by removing stopwords, special characters, and irrelevant elements
+- Apply advanced NLP techniques including tokenization, lemmatization, and stemming
+- Generate detailed text statistics to understand document characteristics
+- Process documents in multiple languages (currently English and Norwegian)</p>
+<p><em>Main interface of the Text Processor Tab</em></p>
+<p><img alt="png" src="../images/text_processor.png" /></p>
+<h2 id="core-components">Core Components</h2>
+<h3 id="textprocessor-class">TextProcessor Class</h3>
+<p>The <code>TextProcessor</code> class serves as the main interface for text processing functionality. It manages the processing workflow and provides methods for calculating text statistics and handling language selection.</p>
+<h4 id="methods">Methods</h4>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>process_text()</code></td>
+<td>Starts processing documents using a worker thread</td>
+<td><code>documents</code>: String or list of strings to process<br><code>language</code>: Language for text processing</td>
+<td>Returns the worker thread that can be connected to signals</td>
+</tr>
+<tr>
+<td><code>get_available_languages()</code></td>
+<td>Gets list of supported languages</td>
+<td>None</td>
+<td>List of supported languages</td>
+</tr>
+<tr>
+<td><code>get_text_statistics()</code></td>
+<td>Calculates text statistics synchronously</td>
+<td><code>text</code>: Text to analyze<br><code>language</code>: Language for text processing</td>
+<td>List of tuples with statistic name and value</td>
+</tr>
+</tbody>
 </table>
-</div>
-
-<h3 id="notes">Notes</h3>
-<p>If a column contains all missing values, the function will skip detailed analysis for that column and indicate that it is entirely missing.
-The function automatically handles mixed data types by converting the column to an object type and issuing a warning.</p>
-<h3 id="output-explanation">Output Explanation:</h3>
+<h3 id="textprocessorworker-class">TextProcessorWorker Class</h3>
+<p>The <code>TextProcessorWorker</code> class extends <code>QThread</code> to handle text processing in a background thread, keeping the UI responsive during processing.</p>
+<h4 id="signals">Signals</h4>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>progress_updated</code></td>
+<td>Emitted to update progress</td>
+<td><code>int</code>: progress percentage, <code>str</code>: status message</td>
+</tr>
+<tr>
+<td><code>processing_completed</code></td>
+<td>Emitted when processing is done</td>
+<td><code>list</code>: list of processed documents</td>
+</tr>
+<tr>
+<td><code>error_occurred</code></td>
+<td>Emitted when an error occurs</td>
+<td><code>str</code>: error message</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-text-processing-functions">Key Text Processing Functions</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>clean_text()</code></td>
+<td>Cleans text by removing stopwords, special characters, and applying stemming/lemmatization</td>
+<td><code>text</code>: Text to clean<br><code>language</code>: Language for processing<br><code>nlp</code>: Pre-loaded SpaCy model (optional)</td>
+</tr>
+<tr>
+<td><code>calculate_text_statistics()</code></td>
+<td>Calculates various text statistics</td>
+<td><code>text</code>: Text to analyze<br><code>language</code>: Language for processing</td>
+</tr>
+<tr>
+<td><code>load_spacy_model()</code></td>
+<td>Loads SpaCy model with caching and thread safety</td>
+<td><code>language</code>: Language for the model</td>
+</tr>
+</tbody>
+</table>
+<h2 id="text-processing-steps">Text Processing Steps</h2>
+<p>The text processor performs several operations to prepare text for topic modeling:</p>
+<ol>
+<li><strong>Email and URL Removal</strong>: Identifies and removes email addresses and web URLs</li>
+<li><strong>Special Character Removal</strong>: Strips punctuation, symbols, and other non-alphanumeric characters</li>
+<li><strong>Number Removal</strong>: Eliminates numeric digits that typically don't contribute to topic meaning</li>
+<li><strong>Case Normalization</strong>: Converts all text to lowercase for consistent processing</li>
+<li><strong>Tokenization</strong>: Breaks text into individual words or tokens</li>
+<li><strong>Stopword Removal</strong>: Filters out common words (like "the", "and", "is") that don't contribute to meaning</li>
+<li><strong>Stemming (optional)</strong>: Reduces words to their root form by removing prefixes and suffixes</li>
+<li><strong>Lemmatization</strong>: Reduces words to their dictionary base form to group similar words together</li>
+</ol>
+<h2 id="user-interface">User Interface</h2>
+<p>The ProcessorTab class provides the user interface for text processing functionality.</p>
+<h3 id="ui-components">UI Components</h3>
 <ul>
-<li><strong>Variable</strong>: The name of the variable.</li>
-<li><strong>Type</strong>: The data type of the variable.</li>
-<li><strong>Unique values</strong>: The number of unique non-null values.</li>
-<li><strong>Missing values</strong>: The number of missing (null) values.</li>
-<li><strong>Blank issues</strong>: Any detected issues with leading, trailing, or embedded blanks in string variables.</li>
-<li><strong>Range</strong>: The minimum and maximum values for numeric variables.</li>
-<li><strong>25th, 50th, 75th percentile</strong>: The respective percentiles for numeric variables.</li>
-<li><strong>Mean</strong>: The mean of numeric variables.</li>
-<li><strong>SD</strong>: The standard deviation for numeric variables (advanced mode).</li>
-<li><strong>95% CI</strong>: The 95% confidence interval for numeric variables (advanced mode).</li>
-<li><strong>Normality test</strong>: The type of normality test applied (Shapiro-Wilk (for datasets with 5000 or fewer observations) or Kolmogorov-Smirnov (for larger datasets)).</li>
-<li><strong>p-value (normality)</strong>: The p-value from the normality test.</li>
-<li><strong>Top categories</strong>: The most frequent categories for categorical variables.</li>
-<li><strong>Top category proportion</strong>: The proportion of the top category for categorical variables (advanced mode).</li>
-<li><strong>95% CI (top category)</strong>: The 95% confidence interval for the top category proportion (advanced mode).</li>
+<li><strong>Text Input Panel</strong>:</li>
+<li>Text area for entering or loading text</li>
+<li>
+<p>Document loading from text files, CSV files, and Word documents</p>
+</li>
+<li>
+<p><strong>Processing Controls</strong>:</p>
+</li>
+<li>Language selection dropdown</li>
+<li>Process button</li>
+<li>Load and Clear buttons</li>
+<li>
+<p>Progress bar with status updates</p>
+</li>
+<li>
+<p><strong>Output Display</strong>:</p>
+</li>
+<li>Processed text view</li>
+<li>
+<p>Text statistics table</p>
+</li>
+<li>
+<p><strong>CSV Import Dialog</strong>:</p>
+</li>
+<li>Options for CSV delimiter, encoding, and header detection</li>
+<li>Column selection for multi-column CSV files</li>
+<li>Data preview table</li>
 </ul>
-<h3 id="faqtroubleshooting">FAQ/Troubleshooting</h3>
-<p><strong>Q1: The codebook function isn't working for my DataFrame with mixed data types. What should I do?</strong></p>
-<p>A: The <code>codebook</code> function automatically detects and converts columns with mixed data types to object (string) type. If you see a warning about mixed types, ensure your data is clean and consistently typed, or allow the function to handle it automatically.</p>
-<p><strong>Q2: Why does the function skip some columns?</strong></p>
-<p>A: The function may skip columns if they contain all missing values (<code>NaN</code>). The output will indicate if a column is entirely missing.</p>
-<p><strong>Q3: How can I adjust the number of decimal places for numerical results?</strong></p>
-<p>A: You can adjust the decimal precision by setting the <code>decimal_places</code> parameter when calling the <code>codebook</code> function:</p>
-<p><code>codebook(df, advanced=True, decimal_places=2)</code></p>
+<h2 id="usage-guide">Usage Guide</h2>
+<h3 id="entering-text">Entering Text</h3>
+<p>Text can be added to the processor in multiple ways:</p>
+<ol>
+<li><strong>Direct Input</strong>: Type or paste text directly into the text area</li>
+<li><strong>Loading Files</strong>: Click "Load Text Files" to open supported file types:</li>
+<li>Text files (*.txt)</li>
+<li>CSV files (*.csv) with column selection</li>
+<li>Word documents (*.docx)</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Code example for processing text programmatically</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">core.text_processor</span> <span class="kn">import</span> <span class="n">TextProcessor</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">text_processor</span> <span class="o">=</span> <span class="n">TextProcessor</span><span class="p">()</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">documents</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;This is a sample document with some example text.&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>             <span class="s2">&quot;Here&#39;s another document with different content.&quot;</span><span class="p">]</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">worker</span> <span class="o">=</span> <span class="n">text_processor</span><span class="o">.</span><span class="n">process_text</span><span class="p">(</span><span class="n">documents</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;english&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Connect to signals</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">worker</span><span class="o">.</span><span class="n">progress_updated</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">update_progress</span><span class="p">)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">worker</span><span class="o">.</span><span class="n">processing_completed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">handle_completed</span><span class="p">)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">worker</span><span class="o">.</span><span class="n">error_occurred</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">handle_error</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="processing-options">Processing Options</h3>
+<ol>
+<li><strong>Language Selection</strong>: Choose the appropriate language from the dropdown</li>
+<li>Currently supported: English and Norwegian</li>
+<li>
+<p>Language selection affects stopword removal, stemming, and lemmatization</p>
+</li>
+<li>
+<p><strong>Processing</strong>: Click "Process Text" to begin cleaning the text</p>
+</li>
+<li>The progress bar shows status updates during processing</li>
+<li>Results appear in the "Processed Text" tab when complete</li>
+</ol>
+<h3 id="working-with-csv-files">Working with CSV Files</h3>
+<p>When importing CSV files, a dialog appears allowing you to:</p>
+<ol>
+<li>Configure import options:</li>
+<li>Select delimiter (comma, semicolon, tab, pipe, or custom)</li>
+<li>Choose file encoding (UTF-8, ASCII, ISO-8859-1, etc.)</li>
+<li>
+<p>Specify whether the first row contains headers</p>
+</li>
+<li>
+<p>Select columns to import:</p>
+</li>
+<li>Choose specific columns to include in the text</li>
+<li>Preview the data before importing</li>
+</ol>
+<p>This is particularly useful for importing structured data where only certain columns contain relevant text for topic modeling.</p>
+<h3 id="understanding-text-statistics">Understanding Text Statistics</h3>
+<p>After processing, the Statistics tab displays various metrics about your text:</p>
+<table>
+<thead>
+<tr>
+<th>Statistic</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number of sentences</td>
+<td>Total count of sentences detected in the text</td>
+</tr>
+<tr>
+<td>Number of tokens</td>
+<td>Total count of words and other elements before filtering</td>
+</tr>
+<tr>
+<td>Number of unique words</td>
+<td>Count of distinct words, showing vocabulary richness</td>
+</tr>
+<tr>
+<td>Number of words (excluding stopwords)</td>
+<td>Count of meaningful words after removing common stopwords</td>
+</tr>
+<tr>
+<td>Number of stop words</td>
+<td>Count of common words that were filtered out</td>
+</tr>
+<tr>
+<td>Average sentence length</td>
+<td>Average number of words per sentence</td>
+</tr>
+<tr>
+<td>Most common words</td>
+<td>List of the most frequently occurring words and their counts</td>
+</tr>
+<tr>
+<td>Number of characters</td>
+<td>Total character count in the text</td>
+</tr>
+<tr>
+<td>Average word length</td>
+<td>Average number of characters per word</td>
+</tr>
+</tbody>
+</table>
+<p>These statistics help evaluate text characteristics and verify the effects of processing.</p>
+<h2 id="language-support">Language Support</h2>
+<p>The text processor supports multiple languages with language-specific processing:</p>
+<h3 id="currently-supported-languages">Currently Supported Languages</h3>
+<ul>
+<li><strong>English</strong>: Complete support for stopwords, stemming, and lemmatization using NLTK and SpaCy's <code>en_core_web_sm</code> model</li>
+<li><strong>Norwegian</strong>: Full language support including Nordic-specific processing using SpaCy's <code>nb_core_news_sm</code> model</li>
+</ul>
+<p>Each language has specific:
+- Stopword lists for filtering common words
+- Stemming algorithms tailored to language structure
+- Lemmatization dictionaries for word normalization</p>
+<h3 id="language-specific-considerations">Language-Specific Considerations</h3>
+<ul>
+<li>Select the predominant language for documents with mixed language content</li>
+<li>Processing effectiveness varies by language, with best results for the fully supported languages</li>
+<li>The system uses SpaCy's language models, which are loaded dynamically the first time they're needed</li>
+</ul>
+<h2 id="tips-for-effective-text-processing">Tips for Effective Text Processing</h2>
+<h3 id="best-practices">Best Practices</h3>
+<ol>
+<li><strong>Check Before and After</strong>: Review both original and processed text to ensure important content isn't lost</li>
+<li><strong>Balance Cleaning Aggressiveness</strong>: </li>
+<li>Too aggressive: Important terms may be removed</li>
+<li>Too lenient: Noise may affect topic modeling quality</li>
+<li><strong>Use Consistent Processing</strong>: Apply the same settings to related documents</li>
+<li><strong>Provide Adequate Volume</strong>: Aim for at least several thousand words total across all documents</li>
+<li><strong>Structure Your Documents</strong>: Each document should ideally cover a coherent topic or subtopic</li>
+</ol>
+<h3 id="domain-specific-considerations">Domain-Specific Considerations</h3>
+<ul>
+<li><strong>Technical Content</strong>: Consider preserving specialized terminology even if uncommon</li>
+<li><strong>Names and Entities</strong>: Proper nouns may be important despite being uncommon words</li>
+<li><strong>Abbreviations</strong>: Standardize abbreviations and acronyms where possible</li>
+<li><strong>Multilingual Content</strong>: Process documents in their primary language for best results</li>
+</ul>
+<h3 id="common-issues-and-solutions">Common Issues and Solutions</h3>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Over-processing removes important terms</td>
+<td>Review processed text and adjust settings if needed</td>
+</tr>
+<tr>
+<td>Under-processing leaves too much noise</td>
+<td>Check statistics for high counts of unique words that may indicate insufficient cleaning</td>
+</tr>
+<tr>
+<td>Very short documents</td>
+<td>Combine related short texts into more substantial documents</td>
+</tr>
+<tr>
+<td>Mixed languages in documents</td>
+<td>Split by language or process using the predominant language</td>
+</tr>
+<tr>
+<td>Special domain vocabulary removed</td>
+<td>Consider creating a custom stopword list that preserves domain terms</td>
+</tr>
+</tbody>
+</table>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="csv-import-issues">CSV Import Issues</h3>
+<ul>
+<li><strong>CSV parsing errors</strong>: Try different delimiter settings or check for file corruption</li>
+<li><strong>Character encoding problems</strong>: Select a different encoding (UTF-8, ISO-8859-1, etc.)</li>
+<li><strong>Large CSV files</strong>: For very large files (&gt;10MB), consider splitting or pre-filtering the data</li>
+</ul>
+<h3 id="processing-performance">Processing Performance</h3>
+<ul>
+<li><strong>Slow processing</strong>: </li>
+<li>SpaCy models are loaded the first time they're used, causing initial delay</li>
+<li>Processing speed depends on document size and complexity</li>
+<li>Large documents with many sentences take longer to process</li>
+</ul>
+<h3 id="language-support-limitations">Language Support Limitations</h3>
+<ul>
+<li><strong>Unsupported languages</strong>: Currently limited to English and Norwegian</li>
+<li><strong>Stemming unavailable</strong>: If no stemmer is available for a language, the system will skip stemming</li>
+<li><strong>Missing stopwords</strong>: If no stopwords are available, an empty set is used</li>
+</ul>
 
 
 

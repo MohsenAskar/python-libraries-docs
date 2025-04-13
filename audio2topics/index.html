@@ -14,7 +14,7 @@
         <link rel="prev" href="../data_insightron/api/">
       
       
-        <link rel="next" href="usage/">
+        <link rel="next" href="transcriber/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -976,6 +976,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
       
@@ -1029,11 +1037,11 @@
   
   
     <li class="md-nav__item">
-      <a href="usage/" class="md-nav__link">
+      <a href="transcriber/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Usage Guide
+    Transcribe Audio
   </span>
   
 
@@ -1050,11 +1058,95 @@
   
   
     <li class="md-nav__item">
-      <a href="api/" class="md-nav__link">
+      <a href="text_processor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    API Reference
+    Process Text
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="topic_modeler/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extract Topics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="validator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Validate Topics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="visualizer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualize Results
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="compare_models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compare Models
   </span>
   
 
@@ -1089,10 +1181,316 @@
 <h1 id="overview">Overview</h1>
 <h1 id="audio2topics-package"><code>Audio2Topics</code> Package 🔊🗂️</h1>
 <p><a href="https://www.python.org/downloads/"><img alt="Python 3.10+" src="https://img.shields.io/badge/python-3.10+-blue.svg" /></a>
-<a href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a></p>
-<p><img alt="svg" src="GUI.svg" /></p>
+<a href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a>
+<a href="https://pepy.tech/projects/audio2topics?timeRange=threeMonths&amp;category=version&amp;includeCIDownloads=true&amp;granularity=daily&amp;viewType=chart&amp;versions"><img alt="Total downloads" src="https://static.pepy.tech/badge/audio2topics" /></a></p>
+<p><img alt="png" src="images/Audio2Topics_photo.png" /></p>
+<p><img alt="svg" src="images/GUI.svg" /></p>
 <p><code>Audio2Topics</code> is python packge that automizes topic extraction from voice files. The package is originally designed to aid researchers that performs interview research. Interview research typically incorporates a series of steps, starting from planning research questions, performing interviews, transcribing, and thorough manual text analysis to extract the main themes and topics of the transcribed text. This manual analysis phase is usually long and time-consuming. Additionally, the feasibility of manual analysis is limited by the volume of transcribed data.  <code>Audio2Topics</code> accelerating this step by automtically converting voice files of interviews into topics simply and effectively.</p>
-<p>Coming soon!</p>
+<p>The application provides an end-to-end pipeline that handles:
+- Audio transcription using OpenAI's Whisper
+- Text preprocessing and cleaning
+- Topic modeling with multiple algorithms
+- Topic validation and optimization
+- Advanced visualizations
+- Model comparison and evaluation</p>
+<p>Audio2Topics bridges the gap between audio content and text analysis, making topic discovery accessible to researchers, content creators, analysts, and anyone who needs to identify key themes in audio materials.</p>
+<p><img alt="Audio2Topics Main Interface" src="placeholder_for_main_interface_screenshot.png" />
+<em>The Audio2Topics main interface with its modular workflow tabs</em></p>
+<h2 id="key-features">Key Features</h2>
+<ul>
+<li><strong>Automated Audio Transcription</strong>: Convert audio files to text using state-of-the-art speech recognition</li>
+<li><strong>Advanced Text Processing</strong>: Clean and normalize text with customizable preprocessing options</li>
+<li><strong>Multiple Topic Modeling Approaches</strong>: Choose from BERTopic, LDA, and NMF algorithms</li>
+<li><strong>Interactive Topic Exploration</strong>: Visualize and explore topics through multiple visualization techniques</li>
+<li><strong>Topic Quality Validation</strong>: Assess topic coherence, diversity, and coverage</li>
+<li><strong>Topic Highlighting</strong>: See how topics appear in original text with color highlighting</li>
+<li><strong>Model Comparison</strong>: Compare different topic modeling approaches side by side</li>
+<li><strong>LLM Integration</strong>: Enhance topic interpretability with AI-generated descriptions</li>
+<li><strong>Comprehensive Reporting</strong>: Generate detailed reports with findings and visualizations</li>
+</ul>
+<h2 id="workflow-overview">Workflow Overview</h2>
+<p>The Audio2Topics application guides users through a structured workflow:</p>
+<ol>
+<li><strong>Audio Transcription</strong> → 2. <strong>Text Processing</strong> → 3. <strong>Topic Modeling</strong> → 4. <strong>Validation &amp; Visualization</strong></li>
+</ol>
+<p><img alt="Audio2Topics Workflow" src="placeholder_for_workflow_diagram.png" />
+<em>The end-to-end workflow of the Audio2Topics application</em></p>
+<h3 id="1-audio-transcription">1. Audio Transcription</h3>
+<p>The first step involves converting audio files to text using OpenAI's Whisper model:
+- Upload audio files (MP3, WAV, M4A, FLAC)
+- Select Whisper model size (tiny to large)
+- Transcribe with automatic language detection
+- Review and save transcriptions</p>
+<h3 id="2-text-processing">2. Text Processing</h3>
+<p>The transcribed text is then prepared for topic modeling:
+- Clean text by removing stopwords, special characters, etc.
+- Apply stemming or lemmatization
+- Process multiple documents simultaneously
+- Analyze text statistics for quality assessment</p>
+<h3 id="3-topic-modeling">3. Topic Modeling</h3>
+<p>The core functionality extracts topics from processed text:
+- Choose from multiple algorithms (BERTopic, NMF, LDA)
+- Configure parameters like number of topics and n-gram range
+- Extract topics with adaptive processing for challenging data
+- Refine topics with LLM-generated descriptions</p>
+<h3 id="4-validation-visualization">4. Validation &amp; Visualization</h3>
+<p>Finally, assess topic quality and explore results:
+- Validate topics with coherence and diversity metrics
+- Find the optimal number of topics for your data
+- Create visualizations from word clouds to interactive topic maps
+- Highlight topics in original text
+- Compare different topic modeling approaches
+- Generate reports for sharing and documentation</p>
+<h2 id="module-summary">Module Summary</h2>
+<p>Audio2Topics consists of several specialized modules, each handling a different aspect of the audio-to-topics pipeline:</p>
+<h3 id="audio-transcription-module">Audio Transcription Module</h3>
+<p>The transcription module converts audio files to text using OpenAI's Whisper speech recognition technology.
+- <strong>Key Components</strong>: Transcriber class, TranscriberWorker, TranscriberTab
+- <strong>Features</strong>: Multiple model sizes, GPU acceleration, language detection, batch processing
+- <a href="transcriber/">Detailed Transcriber Documentation</a></p>
+<h3 id="text-processing-module">Text Processing Module</h3>
+<p>The text processor prepares raw text for topic modeling through cleaning, normalization, and standardization.
+- <strong>Key Components</strong>: TextProcessor class, TextProcessorWorker, ProcessorTab
+- <strong>Features</strong>: Stopword removal, lemmatization, n-gram extraction, text statistics
+- <a href="text_processor/">Detailed Text Processor Documentation</a></p>
+<h3 id="topic-modeling-module">Topic Modeling Module</h3>
+<p>The topic modeler extracts meaningful topics from processed text using multiple algorithms and approaches.
+- <strong>Key Components</strong>: TopicModeler class, TopicModelingWorker, TopicTab
+- <strong>Features</strong>: BERTopic, NMF, and LDA algorithms, adaptive processing, LLM topic refinement
+- <a href="topic_modeler/">Detailed Topic Modeler Documentation</a></p>
+<h3 id="validation-module">Validation Module</h3>
+<p>The validator assesses topic quality and helps find the optimal topic model configuration.
+- <strong>Key Components</strong>: TopicValidator class, ValidationWorker, OptimizationWorker, ValidatorTab
+- <strong>Features</strong>: Coherence metrics, diversity assessment, topic count optimization
+- <a href="validator/">Detailed Validator Documentation</a></p>
+<h3 id="visualization-module">Visualization Module</h3>
+<p>The visualizer creates static and interactive visualizations of text and topic data.
+- <strong>Key Components</strong>: Visualizer class, VisualizationWorker, VisualizerTab
+- <strong>Features</strong>: Word clouds, topic heatmaps, interactive visualizations, topic highlighting
+- <a href="visualizer/">Detailed Visualizer Documentation</a></p>
+<h3 id="comparison-module">Comparison Module</h3>
+<p>The comparison tool enables side-by-side evaluation of different topic modeling approaches.
+- <strong>Key Components</strong>: ComparisonTab class, TopicModelRun, ComparisonRunDialog
+- <strong>Features</strong>: Multiple model runs, comparison visualizations, parameter impact analysis
+- <a href="compare_models/">Detailed Comparison Documentation</a></p>
+<h2 id="installation-and-setup">Installation and Setup</h2>
+<h3 id="system-requirements">System Requirements</h3>
+<ul>
+<li>Python 3.8 or higher</li>
+<li>4GB RAM minimum (8GB+ recommended for larger models)</li>
+<li>NVIDIA GPU with CUDA support (optional, for faster processing)</li>
+<li>Internet connection for model downloads and API access</li>
+</ul>
+<h3 id="dependencies">Dependencies</h3>
+<p>Audio2Topics relies on several key libraries:
+- PyQt5 for the user interface
+- OpenAI Whisper for speech recognition
+- NLTK and spaCy for text processing
+- BERTopic, scikit-learn, and UMAP for topic modeling
+- Matplotlib, seaborn, and wordcloud for visualizations
+- OpenAI/Anthropic APIs for LLM integration (optional)</p>
+<h3 id="installation-steps">Installation Steps</h3>
+<ol>
+<li>
+<p><strong>Install the package</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install audio2topics
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Install required language models</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python -m spacy download en_core_web_sm
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>python -m nltk.downloader punkt stopwords
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Configure API Keys (Optional)</strong></p>
+</li>
+<li>
+<p>For LLM topic refinement, configure OpenAI or Anthropic API keys in the settings</p>
+</li>
+<li>
+<p><strong>Launch the application</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python -m audio2topics
+</code></pre></div></p>
+</li>
+</ol>
+<h2 id="use-cases">Use Cases</h2>
+<p>Audio2Topics serves a wide range of applications across different domains:</p>
+<h3 id="academic-research">Academic Research</h3>
+<ul>
+<li>Analyze interview recordings for qualitative research</li>
+<li>Process lecture content to identify key themes</li>
+<li>Extract topics from academic presentations and symposia</li>
+</ul>
+<h3 id="business-intelligence">Business Intelligence</h3>
+<ul>
+<li>Discover trends in customer support calls</li>
+<li>Analyze meeting recordings for key discussion points</li>
+<li>Process earnings calls and investor presentations</li>
+</ul>
+<h3 id="media-analysis">Media Analysis</h3>
+<ul>
+<li>Extract topics from podcast episodes</li>
+<li>Analyze broadcast interviews and discussions</li>
+<li>Identify themes in documentary content</li>
+</ul>
+<h3 id="personal-knowledge-management">Personal Knowledge Management</h3>
+<ul>
+<li>Process recorded notes and ideas</li>
+<li>Analyze personal audio journals</li>
+<li>Extract topics from recorded lectures or webinars</li>
+</ul>
+<h2 id="customization-and-extension">Customization and Extension</h2>
+<p>Audio2Topics is designed to be extensible, allowing users to customize and enhance its functionality:</p>
+<h3 id="extending-topic-models">Extending Topic Models</h3>
+<p>Add new topic modeling algorithms by:
+1. Creating a new modeling method in <code>core/topic_modeler.py</code>
+2. Adding the method to the UI options in <code>ui/topic_tab.py</code>
+3. Implementing any specialized visualization in <code>core/visualizer.py</code></p>
+<h3 id="custom-preprocessing">Custom Preprocessing</h3>
+<p>Implement custom text preprocessing steps by:
+1. Adding new cleaning functions to <code>core/text_processor.py</code>
+2. Exposing options in the <code>ui/processor_tab.py</code> interface</p>
+<h3 id="api-integration">API Integration</h3>
+<p>Integrate with additional services by:
+1. Adding new API clients in <code>core/llm_service.py</code>
+2. Updating the settings dialog in <code>ui/settings_dialog.py</code></p>
+<h3 id="visualization-extensions">Visualization Extensions</h3>
+<p>Create new visualization types by:
+1. Adding visualization functions to <code>core/visualizer.py</code>
+2. Exposing them in the <code>ui/visualizer_tab.py</code> interface</p>
+<h2 id="advanced-usage">Advanced Usage</h2>
+<h3 id="command-line-interface">Command Line Interface</h3>
+<p>Audio2Topics provides a command-line interface for batch processing:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python -m audio2topics.cli --audio-dir /path/to/audio --output-dir /path/to/output --model medium
+</code></pre></div>
+<h3 id="programmatic-usage">Programmatic Usage</h3>
+<p>The core functionality can be used programmatically:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">audio2topics.core.transcriber</span> <span class="kn">import</span> <span class="n">Transcriber</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">from</span> <span class="nn">audio2topics.core.text_processor</span> <span class="kn">import</span> <span class="n">TextProcessor</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">from</span> <span class="nn">audio2topics.core.topic_modeler</span> <span class="kn">import</span> <span class="n">TopicModeler</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1"># Transcribe audio</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">transcriber</span> <span class="o">=</span> <span class="n">Transcriber</span><span class="p">()</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">worker</span> <span class="o">=</span> <span class="n">transcriber</span><span class="o">.</span><span class="n">transcribe_files</span><span class="p">(</span><span class="n">audio_files</span><span class="p">,</span> <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;medium&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># ...handle signals to get transcriptions...</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1"># Process text</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="n">processor</span> <span class="o">=</span> <span class="n">TextProcessor</span><span class="p">()</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="n">worker</span> <span class="o">=</span> <span class="n">processor</span><span class="o">.</span><span class="n">process_text</span><span class="p">(</span><span class="n">transcriptions</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;english&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="c1"># ...handle signals to get processed_docs...</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="c1"># Extract topics</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="n">modeler</span> <span class="o">=</span> <span class="n">TopicModeler</span><span class="p">()</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="n">worker</span> <span class="o">=</span> <span class="n">modeler</span><span class="o">.</span><span class="n">extract_topics</span><span class="p">(</span><span class="n">processed_docs</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;bertopic&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="c1"># ...handle signals to get topics...</span>
+</code></pre></div>
+<h3 id="integration-with-other-tools">Integration with Other Tools</h3>
+<p>Audio2Topics can be integrated with:
+- Document management systems for content indexing
+- Presentation tools for content summarization
+- Knowledge management systems for information organization</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues-and-solutions">Common Issues and Solutions</h3>
+<h4 id="audio-transcription">Audio Transcription</h4>
+<ul>
+<li><strong>Issue</strong>: Transcription fails to start</li>
+<li><strong>Solution</strong>: Check internet connection, try a smaller model size, ensure sufficient disk space</li>
+</ul>
+<h4 id="text-processing">Text Processing</h4>
+<ul>
+<li><strong>Issue</strong>: Many stopwords in processed text</li>
+<li><strong>Solution</strong>: Adjust language setting, add custom stopwords, check preprocessing settings</li>
+</ul>
+<h4 id="topic-modeling">Topic Modeling</h4>
+<ul>
+<li><strong>Issue</strong>: "Dimensionality error" with BERTopic</li>
+<li><strong>Solution</strong>: Enable adaptive processing, try BERTopic-PCA or NMF instead</li>
+</ul>
+<h4 id="validation">Validation</h4>
+<ul>
+<li><strong>Issue</strong>: Low coherence scores</li>
+<li><strong>Solution</strong>: Try different preprocessing, adjust number of topics, try another algorithm</li>
+</ul>
+<h4 id="visualization">Visualization</h4>
+<ul>
+<li><strong>Issue</strong>: Interactive visualization not loading</li>
+<li><strong>Solution</strong>: Check if the model type matches the visualization type, try a different visualization</li>
+</ul>
+<h3 id="performance-optimization">Performance Optimization</h3>
+<ul>
+<li>Use smaller Whisper models (base/small) for faster transcription</li>
+<li>Process documents in smaller batches for memory efficiency</li>
+<li>Use GPU acceleration when available</li>
+<li>Save models and results for reuse</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="audio-recording-quality">Audio Recording Quality</h3>
+<ul>
+<li>Use clear recordings with minimal background noise</li>
+<li>Ensure adequate volume levels</li>
+<li>Use lossless formats when possible</li>
+</ul>
+<h3 id="document-preparation">Document Preparation</h3>
+<ul>
+<li>Split long recordings into shorter segments</li>
+<li>Group related content into meaningful documents</li>
+<li>Remove irrelevant sections before processing</li>
+</ul>
+<h3 id="topic-modeling-strategy">Topic Modeling Strategy</h3>
+<ol>
+<li>Start with a small subset of documents to test different approaches</li>
+<li>Use the Comparison tab to identify the best method for your data</li>
+<li>Validate topic quality before drawing conclusions</li>
+<li>Use LLM refinement for clearer topic interpretations</li>
+<li>Combine quantitative metrics with human judgment</li>
+</ol>
+<h3 id="reporting-and-sharing">Reporting and Sharing</h3>
+<ul>
+<li>Export visualizations in appropriate formats for your audience</li>
+<li>Include topic words and example documents in reports</li>
+<li>Provide context for topics through LLM-generated descriptions</li>
+<li>Use interactive formats (HTML) for detailed exploration</li>
+</ul>
+<h2 id="glossary">Glossary</h2>
+<ul>
+<li><strong>BERTopic</strong>: Topic modeling algorithm that leverages BERT embeddings</li>
+<li><strong>Coherence</strong>: Measure of how semantically related the words within a topic are</li>
+<li><strong>Diversity</strong>: Measure of how distinct topics are from each other</li>
+<li><strong>Elbow Method</strong>: Technique for finding the optimal number of topics</li>
+<li><strong>LDA</strong>: Latent Dirichlet Allocation, a probabilistic topic modeling method</li>
+<li><strong>Lemmatization</strong>: Process of reducing words to their base or dictionary form</li>
+<li><strong>N-gram</strong>: Contiguous sequence of n items from a text sample</li>
+<li><strong>NMF</strong>: Non-negative Matrix Factorization, a topic modeling algorithm</li>
+<li><strong>Stopwords</strong>: Common words that are filtered out during text processing</li>
+<li><strong>UMAP</strong>: Uniform Manifold Approximation and Projection, a dimensionality reduction technique</li>
+<li><strong>Whisper</strong>: OpenAI's speech recognition model for audio transcription</li>
+</ul>
+<h2 id="references-and-resources">References and Resources</h2>
+<h3 id="underlying-technologies">Underlying Technologies</h3>
+<ul>
+<li><a href="https://github.com/openai/whisper">OpenAI Whisper</a></li>
+<li><a href="https://github.com/MaartenGr/BERTopic">BERTopic</a></li>
+<li><a href="https://spacy.io/">spaCy</a></li>
+<li><a href="https://scikit-learn.org/">scikit-learn</a></li>
+<li><a href="https://riverbankcomputing.com/software/pyqt/">PyQt</a></li>
+</ul>
+<h2 id="license">License</h2>
+<p>Released under the MIT License: For more details, see the <code>LICENSE</code> file.
+Copyright (C) 2024 <strong><code>stata_codebook</code></strong></p>
+<p>Developed by: Mohsen Askar <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#101;&#97;&#115;&#101;&#114;&#49;&#57;&#56;&#53;&#49;&#49;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#99;&#101;&#97;&#115;&#101;&#114;&#49;&#57;&#56;&#53;&#49;&#49;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
+<div class="admonition quote">
+<p class="admonition-title">Citation</p>
+<p>If you use Stata Codebook in your research, please cite:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nc">@software</span><span class="p">{</span><span class="nl">stata_codebook2024</span><span class="p">,</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{AssumptionSheriff: A Python Package for Statistical Assumption Checking}</span><span class="p">,</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Mohsen Askar}</span><span class="p">,</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="na">e-mail</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{ceaser198511@gmail.com}</span><span class="p">,</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2024}</span><span class="p">,</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="na">url</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://pypi.org/project/stata_codebook/}</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">}</span>
+</code></pre></div></p>
+</div>
 
 
 
