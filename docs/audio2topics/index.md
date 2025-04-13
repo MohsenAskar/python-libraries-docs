@@ -22,8 +22,6 @@ The application provides an end-to-end pipeline that handles:
 
 Audio2Topics bridges the gap between audio content and text analysis, making topic discovery accessible to researchers, content creators, analysts, and anyone who needs to identify key themes in audio materials.
 
-![Audio2Topics Main Interface](placeholder_for_main_interface_screenshot.png)
-*The Audio2Topics main interface with its modular workflow tabs*
 
 ## Key Features
 
@@ -43,9 +41,6 @@ Audio2Topics bridges the gap between audio content and text analysis, making top
 The Audio2Topics application guides users through a structured workflow:
 
 1. **Audio Transcription** → 2. **Text Processing** → 3. **Topic Modeling** → 4. **Validation & Visualization**
-
-![Audio2Topics Workflow](placeholder_for_workflow_diagram.png)
-*The end-to-end workflow of the Audio2Topics application*
 
 ### 1. Audio Transcription
 The first step involves converting audio files to text using OpenAI's Whisper model:

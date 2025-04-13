@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mohsenaskar.github.io/python-libraries-docs/audio2topics/api/">
+        <link rel="canonical" href="https://mohsenaskar.github.io/python-libraries-docs/audio2topics/transcriber/">
       
       
-        <link rel="prev" href="../usage/">
+        <link rel="prev" href="../">
       
+      
+        <link rel="next" href="../text_processor/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +22,7 @@
     
     
       
-        <title>API Reference - Python Libraries developed by Mohsen Askar</title>
+        <title>Transcribe Audio - Python Libraries developed by Mohsen Askar</title>
       
     
     
@@ -73,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#audio-transcription-module" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API Reference
+              Transcribe Audio
             
           </span>
         </div>
@@ -969,6 +976,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
       
@@ -1019,14 +1034,273 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../usage/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Transcribe Audio
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Usage Guide
+    Transcribe Audio
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transcriber-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transcriber Class
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transcriber Class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transcriberworker-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      TranscriberWorker Class
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TranscriberWorker Class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI Components
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loading-audio-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loading Audio Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-transcription-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selecting Transcription Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-transcription" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting Transcription
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-and-saving-transcriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing and Saving Transcriptions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whisper-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Whisper Models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#language-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language Support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-for-better-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips for Better Results
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text_processor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Process Text
   </span>
   
 
@@ -1040,26 +1314,81 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../topic_modeler/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    API Reference
+    Extract Topics
   </span>
   
 
       </a>
-      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Validate Topics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualizer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualize Results
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compare_models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compare Models
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1087,9 +1416,284 @@
                   
 
 
-  <h1>API Reference</h1>
-
-<p>Coming soon! :)</p>
+<h1 id="audio-transcription-module">Audio Transcription Module</h1>
+<h2 id="overview">Overview</h2>
+<p>The Audio Transcription module enables users to convert audio files to text using OpenAI's Whisper speech recognition technology. It forms the first step in the Audio2Topics workflow, providing accurate transcriptions of audio content for further text processing and topic modeling.</p>
+<p>This module allows you to:
+- Load multiple audio files in various formats (MP3, WAV, M4A, FLAC)
+- Select from different Whisper model sizes based on your accuracy and speed requirements
+- Process files using either CPU or GPU acceleration
+- View and save transcriptions to text files</p>
+<p><em>Main interface of the Transcriber Tab</em>
+<img alt="png" src="../images/transcriber.png" />
+<img alt="png" src="../images/api.png" /></p>
+<h2 id="core-components">Core Components</h2>
+<h3 id="transcriber-class">Transcriber Class</h3>
+<p>The <code>Transcriber</code> class serves as the main interface for audio transcription functionality. It manages the transcription process and provides methods for saving results and querying available resources.</p>
+<h4 id="methods">Methods</h4>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+<th>Parameters</th>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>transcribe_files()</code></td>
+<td>Starts transcribing audio files using a worker thread</td>
+<td><code>audio_files</code>: Dict[str, bytes] - Dictionary mapping filenames to file content<br><code>model_name</code>: str - Whisper model name to use</td>
+<td>Returns the worker thread that can be connected to signals</td>
+</tr>
+<tr>
+<td><code>save_transcriptions()</code></td>
+<td>Saves transcriptions to text files</td>
+<td><code>transcriptions</code>: Dict[str, str] - Dictionary with filenames as keys and transcriptions as values<br><code>output_dir</code>: str - Directory to save files</td>
+<td>List[str] - List of paths to saved transcription files</td>
+</tr>
+<tr>
+<td><code>get_available_devices()</code></td>
+<td>Gets list of available devices for transcription</td>
+<td>None</td>
+<td>List[str] - List of available devices (CPU and GPUs if available)</td>
+</tr>
+<tr>
+<td><code>get_available_models()</code></td>
+<td>Gets list of available Whisper models</td>
+<td>None</td>
+<td>List[str] - List of available model names</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transcriberworker-class">TranscriberWorker Class</h3>
+<p>The <code>TranscriberWorker</code> class extends <code>QThread</code> to handle audio transcription in a background thread, keeping the UI responsive during processing.</p>
+<h4 id="signals">Signals</h4>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>progress_updated</code></td>
+<td>Emitted to update progress</td>
+<td><code>int</code>: progress percentage, <code>str</code>: status message</td>
+</tr>
+<tr>
+<td><code>transcription_completed</code></td>
+<td>Emitted when transcription is done</td>
+<td><code>dict</code>: dictionary of transcriptions</td>
+</tr>
+<tr>
+<td><code>error_occurred</code></td>
+<td>Emitted when an error occurs</td>
+<td><code>str</code>: error message</td>
+</tr>
+</tbody>
+</table>
+<h2 id="user-interface">User Interface</h2>
+<p>The TranscriberTab class provides the user interface for the audio transcription functionality.</p>
+<h3 id="ui-components">UI Components</h3>
+<ul>
+<li><strong>Audio Files Panel</strong>:</li>
+<li>File list showing loaded audio files</li>
+<li>
+<p>Load and Clear buttons for file management</p>
+</li>
+<li>
+<p><strong>Transcription Controls</strong>:</p>
+</li>
+<li>Model selection dropdown (tiny, base, small, medium, large)</li>
+<li>Device selection (CPU/GPU options)</li>
+<li>Language auto-detection toggle</li>
+<li>Transcribe button</li>
+<li>
+<p>Progress bar</p>
+</li>
+<li>
+<p><strong>Transcription View</strong>:</p>
+</li>
+<li>Text area showing the current transcription</li>
+<li>Save button for exporting transcriptions</li>
+</ul>
+<h2 id="usage-guide">Usage Guide</h2>
+<h3 id="loading-audio-files">Loading Audio Files</h3>
+<ol>
+<li>Click the "Load Audio Files" button to open the file selection dialog</li>
+<li>Select one or more audio files (supported formats: MP3, WAV, M4A, FLAC)</li>
+<li>Selected files will appear in the file list on the left panel</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Code example for loading files programmatically</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">core.transcriber</span> <span class="kn">import</span> <span class="n">Transcriber</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">transcriber</span> <span class="o">=</span> <span class="n">Transcriber</span><span class="p">()</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">audio_files</span> <span class="o">=</span> <span class="p">{}</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Read file content</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;example.mp3&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">audio_files</span><span class="p">[</span><span class="s2">&quot;example.mp3&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="selecting-transcription-options">Selecting Transcription Options</h3>
+<ol>
+<li>Choose a Whisper model from the dropdown:</li>
+<li><strong>tiny</strong>: Fastest, lowest accuracy (~75MB)</li>
+<li><strong>base</strong>: Fast with improved accuracy (~142MB)</li>
+<li><strong>small</strong>: Good balance of speed and accuracy (~466MB)</li>
+<li><strong>medium</strong>: High quality for most use cases (~1.5GB)</li>
+<li>
+<p><strong>large</strong>: Maximum accuracy for challenging audio (~3GB)</p>
+</li>
+<li>
+<p>Select a device:</p>
+</li>
+<li><strong>CPU</strong>: Available on all systems</li>
+<li>
+<p><strong>CUDA</strong>: Available if you have an NVIDIA GPU with CUDA support</p>
+</li>
+<li>
+<p>Optionally toggle language auto-detection (enabled by default)</p>
+</li>
+</ol>
+<h3 id="starting-transcription">Starting Transcription</h3>
+<ol>
+<li>Click the "Transcribe" button to begin processing</li>
+<li>The progress bar will display the current status</li>
+<li>Transcription speed depends on:</li>
+<li>Model size</li>
+<li>Audio file length</li>
+<li>Selected device (GPU is significantly faster)</li>
+<li>System specifications</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Code example for starting transcription programmatically</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">worker</span> <span class="o">=</span> <span class="n">transcriber</span><span class="o">.</span><span class="n">transcribe_files</span><span class="p">(</span><span class="n">audio_files</span><span class="p">,</span> <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;medium&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Connect to signals</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">worker</span><span class="o">.</span><span class="n">progress_updated</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">update_progress</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">worker</span><span class="o">.</span><span class="n">transcription_completed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">handle_completed</span><span class="p">)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">worker</span><span class="o">.</span><span class="n">error_occurred</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">handle_error</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="viewing-and-saving-transcriptions">Viewing and Saving Transcriptions</h3>
+<ol>
+<li>After transcription completes, select a file from the list to view its transcription</li>
+<li>Click "Save Transcription" to export the current transcription to a text file</li>
+<li>Choose a location and filename in the save dialog</li>
+<li>The transcription will be saved as a plain text file</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Code example for saving transcriptions programmatically</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">transcriptions</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;example.mp3&quot;</span><span class="p">:</span> <span class="s2">&quot;This is the transcribed text.&quot;</span><span class="p">}</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">saved_files</span> <span class="o">=</span> <span class="n">transcriber</span><span class="o">.</span><span class="n">save_transcriptions</span><span class="p">(</span><span class="n">transcriptions</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="s2">&quot;./output&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="whisper-models">Whisper Models</h2>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Parameters</th>
+<th>Size</th>
+<th>Relative Speed</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tiny</td>
+<td>39M</td>
+<td>~75MB</td>
+<td>~32x</td>
+<td>Quick transcriptions where accuracy is less critical</td>
+</tr>
+<tr>
+<td>base</td>
+<td>74M</td>
+<td>~142MB</td>
+<td>~16x</td>
+<td>Fast transcriptions with improved accuracy</td>
+</tr>
+<tr>
+<td>small</td>
+<td>244M</td>
+<td>~466MB</td>
+<td>~6x</td>
+<td>Good balance between speed and accuracy</td>
+</tr>
+<tr>
+<td>medium</td>
+<td>769M</td>
+<td>~1.5GB</td>
+<td>~2x</td>
+<td>High-quality transcriptions for most use cases</td>
+</tr>
+<tr>
+<td>large</td>
+<td>1550M</td>
+<td>~3GB</td>
+<td>1x</td>
+<td>Maximum accuracy for challenging audio</td>
+</tr>
+</tbody>
+</table>
+<h2 id="language-support">Language Support</h2>
+<p>Whisper supports transcription in numerous languages and can automatically detect the language being spoken. Best results are achieved with:</p>
+<ul>
+<li>English</li>
+<li>Norwegian</li>
+</ul>
+<h2 id="tips-for-better-results">Tips for Better Results</h2>
+<ol>
+<li><strong>Audio Quality Matters</strong>:</li>
+<li>Use clear recordings with minimal background noise</li>
+<li>
+<p>Higher quality audio files generally produce better transcriptions</p>
+</li>
+<li>
+<p><strong>Model Selection</strong>:</p>
+</li>
+<li>Start with the "medium" model for a good balance of accuracy and speed</li>
+<li>Use "turbo" for best balance between spped and accuracy</li>
+<li>Use "large" for difficult audio or when maximum accuracy is needed</li>
+<li>
+<p>Use smaller models for faster processing or when resources are limited</p>
+</li>
+<li>
+<p><strong>Processing Strategy</strong>:</p>
+</li>
+<li>Split very long recordings into 10-30 minute segments for better results</li>
+<li>
+<p>Test with a short sample to determine the best model for your specific audio</p>
+</li>
+<li>
+<p><strong>Hardware Considerations</strong>:</p>
+</li>
+<li>GPU acceleration dramatically improves processing speed</li>
+<li>Larger models require more memory (RAM)</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<p><strong>Transcription fails to start</strong>
+- Check for active internet connection (required for initial model download)
+- Try a smaller model if experiencing memory issues
+- Ensure sufficient disk space for model download
+- Restart the application and try again</p>
+<p><strong>Poor transcription quality</strong>
+- Try a larger model (medium or large)
+- Check audio quality and consider pre-processing to reduce noise
+- For non-English content, verify language detection is working correctly
+- Split complex audio with multiple speakers into smaller segments</p>
+<p><strong>Slow transcription</strong>
+- Use a CPU with more cores or enable GPU acceleration if available
+- Try a smaller model (base or small)
+- Close other resource-intensive applications while transcribing
+- For long files, consider splitting them into smaller chunks</p>
+<p><strong>Out of memory error</strong>
+- Use a smaller model
+- Reduce batch size if transcribing multiple files
+- Close other applications to free up memory
+- Consider upgrading your system's RAM if this is a recurring issue</p>
 
 
 
