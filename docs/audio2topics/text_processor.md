@@ -100,21 +100,6 @@ Text can be added to the processor in multiple ways:
    - CSV files (*.csv) with column selection
    - Word documents (*.docx)
 
-```python
-# Code example for processing text programmatically
-from core.text_processor import TextProcessor
-
-text_processor = TextProcessor()
-documents = ["This is a sample document with some example text.",
-             "Here's another document with different content."]
-
-worker = text_processor.process_text(documents, language="english")
-
-# Connect to signals
-worker.progress_updated.connect(update_progress)
-worker.processing_completed.connect(handle_completed)
-worker.error_occurred.connect(handle_error)
-```
 
 ### Processing Options
 

@@ -146,6 +146,12 @@ Audio2Topics relies on several key libraries:
    - For LLM topic refinement, configure OpenAI or Anthropic API keys in the settings
 
 4. **Launch the application**
+   - In the terminal, activate the enviroments where the packages is installed and type:
+
+   ```
+   audio2topics
+   ```
+Or
    ```
    python -m audio2topics
    ```
@@ -174,69 +180,6 @@ Audio2Topics serves a wide range of applications across different domains:
 - Analyze personal audio journals
 - Extract topics from recorded lectures or webinars
 
-## Customization and Extension
-
-Audio2Topics is designed to be extensible, allowing users to customize and enhance its functionality:
-
-### Extending Topic Models
-Add new topic modeling algorithms by:
-1. Creating a new modeling method in `core/topic_modeler.py`
-2. Adding the method to the UI options in `ui/topic_tab.py`
-3. Implementing any specialized visualization in `core/visualizer.py`
-
-### Custom Preprocessing
-Implement custom text preprocessing steps by:
-1. Adding new cleaning functions to `core/text_processor.py`
-2. Exposing options in the `ui/processor_tab.py` interface
-
-### API Integration
-Integrate with additional services by:
-1. Adding new API clients in `core/llm_service.py`
-2. Updating the settings dialog in `ui/settings_dialog.py`
-
-### Visualization Extensions
-Create new visualization types by:
-1. Adding visualization functions to `core/visualizer.py`
-2. Exposing them in the `ui/visualizer_tab.py` interface
-
-## Advanced Usage
-
-### Command Line Interface
-Audio2Topics provides a command-line interface for batch processing:
-
-```
-python -m audio2topics.cli --audio-dir /path/to/audio --output-dir /path/to/output --model medium
-```
-
-### Programmatic Usage
-The core functionality can be used programmatically:
-
-```python
-from audio2topics.core.transcriber import Transcriber
-from audio2topics.core.text_processor import TextProcessor
-from audio2topics.core.topic_modeler import TopicModeler
-
-# Transcribe audio
-transcriber = Transcriber()
-worker = transcriber.transcribe_files(audio_files, model_name="medium")
-# ...handle signals to get transcriptions...
-
-# Process text
-processor = TextProcessor()
-worker = processor.process_text(transcriptions, language="english")
-# ...handle signals to get processed_docs...
-
-# Extract topics
-modeler = TopicModeler()
-worker = modeler.extract_topics(processed_docs, method="bertopic")
-# ...handle signals to get topics...
-```
-
-### Integration with Other Tools
-Audio2Topics can be integrated with:
-- Document management systems for content indexing
-- Presentation tools for content summarization
-- Knowledge management systems for information organization
 
 ## Troubleshooting
 

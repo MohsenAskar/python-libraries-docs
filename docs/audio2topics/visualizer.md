@@ -58,125 +58,34 @@ The module provides various visualization types for different analytical purpose
 #### Word Cloud
 Generates a visual representation of word frequency where word size corresponds to frequency.
 
-```python
-# Example code
-from core.visualizer import Visualizer
-
-visualizer = Visualizer()
-worker = visualizer.generate_visualization(
-    viz_type='wordcloud',
-    data=documents,
-    language='english',
-    colormap='viridis'
-)
-```
 
 #### Word Frequency
 Creates a horizontal bar chart showing the most frequent words in the documents.
 
-```python
-# Example code
-worker = visualizer.generate_visualization(
-    viz_type='word_freq',
-    data=documents,
-    language='english',
-    top_n=30
-)
-```
-
 #### N-grams Analysis
 Visualizes the most common phrases (word sequences) in the documents.
-
-```python
-# Example code
-worker = visualizer.generate_visualization(
-    viz_type='ngrams',
-    data=documents,
-    n=2,  # bigrams
-    top_n=50,
-    language='english'
-)
-```
 
 ### Topic-Based Visualizations
 
 #### Topic Distribution
 Shows how documents are distributed across topics using a bar chart.
 
-```python
-# Example code
-worker = visualizer.generate_visualization(
-    viz_type='topic_distribution',
-    data=topic_counts
-)
-```
-
 #### Topic Keywords
 Visualizes the most important words for each topic in a grid of bar charts.
-
-```python
-# Example code
-worker = visualizer.generate_visualization(
-    viz_type='topic_keywords',
-    data=topics_words,
-    top_n=10,
-    colormap='viridis'
-)
-```
 
 #### Topic Heatmap
 Creates a heatmap showing document-topic assignments, where color intensity represents probability.
 
-```python
-# Example code
-worker = visualizer.generate_visualization(
-    viz_type='topic_heatmap',
-    data=doc_topic_matrix
-)
-```
-
 #### Topic Highlighting
 Highlights topics directly in the original text documents using colored spans.
-
-```python
-# Example code
-highlighted_docs = visualizer.highlight_topics_in_documents(
-    documents,
-    topic_model,
-    topic_ids=[0, 1, 2], 
-    colors=['#ff0000', '#00ff00', '#0000ff']
-)
-```
 
 ### Interactive Visualizations
 
 #### pyLDAvis (LDA Visualization)
 Creates an interactive visualization for LDA topic models using the pyLDAvis library.
 
-```python
-# Example code
-worker = visualizer.generate_visualization(
-    viz_type='pyldavis',
-    data={
-        'model': lda_model,
-        'dtm': document_term_matrix,
-        'vectorizer': vectorizer
-    },
-    mds='tsne'
-)
-```
-
 #### BERTopic Visualization
 Creates an interactive visualization for BERTopic models showing topic relationships.
-
-```python
-# Example code
-worker = visualizer.generate_visualization(
-    viz_type='bertopic_interactive',
-    data=bertopic_model,
-    topics=top_10_topics
-)
-```
 
 ## User Interface
 

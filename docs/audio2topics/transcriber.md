@@ -72,18 +72,6 @@ The TranscriberTab class provides the user interface for the audio transcription
 2. Select one or more audio files (supported formats: MP3, WAV, M4A, FLAC)
 3. Selected files will appear in the file list on the left panel
 
-```python
-# Code example for loading files programmatically
-from core.transcriber import Transcriber
-
-transcriber = Transcriber()
-audio_files = {}
-
-# Read file content
-with open("example.mp3", "rb") as file:
-    audio_files["example.mp3"] = file.read()
-```
-
 ### Selecting Transcription Options
 
 1. Choose a Whisper model from the dropdown:
@@ -109,15 +97,6 @@ with open("example.mp3", "rb") as file:
    - Selected device (GPU is significantly faster)
    - System specifications
 
-```python
-# Code example for starting transcription programmatically
-worker = transcriber.transcribe_files(audio_files, model_name="medium")
-
-# Connect to signals
-worker.progress_updated.connect(update_progress)
-worker.transcription_completed.connect(handle_completed)
-worker.error_occurred.connect(handle_error)
-```
 
 ### Viewing and Saving Transcriptions
 
@@ -126,11 +105,7 @@ worker.error_occurred.connect(handle_error)
 3. Choose a location and filename in the save dialog
 4. The transcription will be saved as a plain text file
 
-```python
-# Code example for saving transcriptions programmatically
-transcriptions = {"example.mp3": "This is the transcribed text."}
-saved_files = transcriber.save_transcriptions(transcriptions, output_dir="./output")
-```
+
 
 ## Whisper Models
 

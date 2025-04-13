@@ -197,29 +197,6 @@ The results are presented in three tabs:
 4. Click "Refine Topics" to generate human-readable descriptions
 5. Review the results and click "OK" to apply the descriptions
 
-```python
-# Code example for topic extraction
-from core.topic_modeler import TopicModeler
-
-# Initialize the topic modeler
-topic_modeler = TopicModeler()
-
-# Extract topics from documents
-worker = topic_modeler.extract_topics(
-    documents=processed_documents,
-    language="english",
-    n_gram_range=(1, 2),
-    min_topic_size=2,
-    nr_topics="auto",
-    method="bertopic"
-)
-
-# Connect to signals
-worker.progress_updated.connect(update_progress)
-worker.topics_extracted.connect(handle_topics)
-worker.error_occurred.connect(handle_error)
-```
-
 ## Adaptive Processing
 
 The adaptive processing feature helps overcome common challenges in topic modeling, particularly with small document collections or single large documents.
@@ -324,14 +301,6 @@ Topics are represented by:
 ### Model Persistence
 
 You can save and load topic models for later use:
-
-```python
-# Save a model
-topic_modeler.save_model("my_topic_model.pkl")
-
-# Load a model
-topic_modeler.load_model("my_topic_model.pkl")
-```
 
 ### LLM Integration
 

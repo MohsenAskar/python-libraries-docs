@@ -116,18 +116,6 @@ The `ValidatorTab` class provides a comprehensive interface for validating topic
 5. Examine the topic distribution to see how documents are assigned
 6. Use the visualization to get a graphical view of the topic distribution
 
-```python
-# Code example for validating topics programmatically
-from core.validator import TopicValidator
-
-validator = TopicValidator()
-worker = validator.validate_model(documents, topic_model)
-
-# Connect to signals
-worker.progress_updated.connect(update_progress)
-worker.validation_completed.connect(handle_results)
-worker.error_occurred.connect(handle_error)
-```
 
 ### Finding the Optimal Number of Topics
 
@@ -143,22 +131,6 @@ worker.error_occurred.connect(handle_error)
    - Diversity score
 7. Use the visualization to see how scores vary across different topic counts
 
-```python
-# Code example for finding optimal topics programmatically
-from core.validator import TopicValidator
-
-validator = TopicValidator()
-worker = validator.find_optimal_topics(
-    documents, 
-    max_topics=15, 
-    min_topic_size=2
-)
-
-# Connect to signals
-worker.progress_updated.connect(update_progress)
-worker.optimization_completed.connect(handle_recommendations)
-worker.error_occurred.connect(handle_error)
-```
 
 ## Understanding Optimization
 

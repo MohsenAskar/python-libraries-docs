@@ -114,36 +114,6 @@ For LDA models, additional options are available:
 - **Min/Max Topics**: Range to search for the optimal topic count
 - **Step Size**: Granularity of the topic count search
 
-```python
-# Example code for programmatically running a comparison
-from ui.comparison_tab import ComparisonTab, TopicModelRun
-
-# Create runs with different configurations
-runs = [
-    {
-        'name': 'BERTopic Default',
-        'method': 'bertopic',
-        'language': 'english',
-        'nr_topics': 'auto',
-        'min_topic_size': 2,
-        'n_gram_range': (1, 2)
-    },
-    {
-        'name': 'LDA 10 Topics',
-        'method': 'lda',
-        'language': 'english',
-        'nr_topics': 10,
-        'min_topic_size': 2,
-        'n_gram_range': (1, 2)
-    }
-]
-
-# Execute runs and generate comparison
-comparison_tab = ComparisonTab()
-comparison_tab.set_documents(documents)
-comparison_tab.execute_runs(runs)
-```
-
 ### Understanding Visualizations
 
 #### Topic Similarity Heatmap
