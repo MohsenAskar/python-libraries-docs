@@ -62,8 +62,12 @@ nav:
       - API Reference: data_insightron/api.md
   - 🔊🗂️ Audio2Topics:
       - Overview: audio2topics/index.md
-      - Usage Guide: audio2topics/usage.md
-      - API Reference: audio2topics/api.md
+      - Transcribe Audio: audio2topics/transcriber.md
+      - Process Text: audio2topics/text_processor.md
+      - Extract Topics: audio2topics/topic_modeler.md
+      - Validate Topics: audio2topics/validator.md
+      - Visualize Results: audio2topics/visualizer.md
+      - Compare Models: audio2topics/compare_models.md
 
 markdown_extensions:
   - pymdownx.highlight:
