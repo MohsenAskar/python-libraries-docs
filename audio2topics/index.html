@@ -1305,11 +1305,15 @@
 <p>For LLM topic refinement, configure OpenAI or Anthropic API keys in the settings</p>
 </li>
 <li>
-<p><strong>Launch the application</strong>
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python -m audio2topics
-</code></pre></div></p>
+<p><strong>Launch the application</strong></p>
 </li>
+<li>In the terminal, activate the enviroments where the packages is installed and type:</li>
 </ol>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>audio2topics
+</code></pre></div>
+Or
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python -m audio2topics
+</code></pre></div></p>
 <h2 id="use-cases">Use Cases</h2>
 <p>Audio2Topics serves a wide range of applications across different domains:</p>
 <h3 id="academic-research">Academic Research</h3>
@@ -1336,56 +1340,6 @@
 <li>Analyze personal audio journals</li>
 <li>Extract topics from recorded lectures or webinars</li>
 </ul>
-<h2 id="customization-and-extension">Customization and Extension</h2>
-<p>Audio2Topics is designed to be extensible, allowing users to customize and enhance its functionality:</p>
-<h3 id="extending-topic-models">Extending Topic Models</h3>
-<p>Add new topic modeling algorithms by:
-1. Creating a new modeling method in <code>core/topic_modeler.py</code>
-2. Adding the method to the UI options in <code>ui/topic_tab.py</code>
-3. Implementing any specialized visualization in <code>core/visualizer.py</code></p>
-<h3 id="custom-preprocessing">Custom Preprocessing</h3>
-<p>Implement custom text preprocessing steps by:
-1. Adding new cleaning functions to <code>core/text_processor.py</code>
-2. Exposing options in the <code>ui/processor_tab.py</code> interface</p>
-<h3 id="api-integration">API Integration</h3>
-<p>Integrate with additional services by:
-1. Adding new API clients in <code>core/llm_service.py</code>
-2. Updating the settings dialog in <code>ui/settings_dialog.py</code></p>
-<h3 id="visualization-extensions">Visualization Extensions</h3>
-<p>Create new visualization types by:
-1. Adding visualization functions to <code>core/visualizer.py</code>
-2. Exposing them in the <code>ui/visualizer_tab.py</code> interface</p>
-<h2 id="advanced-usage">Advanced Usage</h2>
-<h3 id="command-line-interface">Command Line Interface</h3>
-<p>Audio2Topics provides a command-line interface for batch processing:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python -m audio2topics.cli --audio-dir /path/to/audio --output-dir /path/to/output --model medium
-</code></pre></div>
-<h3 id="programmatic-usage">Programmatic Usage</h3>
-<p>The core functionality can be used programmatically:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">audio2topics.core.transcriber</span> <span class="kn">import</span> <span class="n">Transcriber</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">from</span> <span class="nn">audio2topics.core.text_processor</span> <span class="kn">import</span> <span class="n">TextProcessor</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">from</span> <span class="nn">audio2topics.core.topic_modeler</span> <span class="kn">import</span> <span class="n">TopicModeler</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1"># Transcribe audio</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">transcriber</span> <span class="o">=</span> <span class="n">Transcriber</span><span class="p">()</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">worker</span> <span class="o">=</span> <span class="n">transcriber</span><span class="o">.</span><span class="n">transcribe_files</span><span class="p">(</span><span class="n">audio_files</span><span class="p">,</span> <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;medium&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># ...handle signals to get transcriptions...</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1"># Process text</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="n">processor</span> <span class="o">=</span> <span class="n">TextProcessor</span><span class="p">()</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="n">worker</span> <span class="o">=</span> <span class="n">processor</span><span class="o">.</span><span class="n">process_text</span><span class="p">(</span><span class="n">transcriptions</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;english&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="c1"># ...handle signals to get processed_docs...</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="c1"># Extract topics</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="n">modeler</span> <span class="o">=</span> <span class="n">TopicModeler</span><span class="p">()</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="n">worker</span> <span class="o">=</span> <span class="n">modeler</span><span class="o">.</span><span class="n">extract_topics</span><span class="p">(</span><span class="n">processed_docs</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;bertopic&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="c1"># ...handle signals to get topics...</span>
-</code></pre></div>
-<h3 id="integration-with-other-tools">Integration with Other Tools</h3>
-<p>Audio2Topics can be integrated with:
-- Document management systems for content indexing
-- Presentation tools for content summarization
-- Knowledge management systems for information organization</p>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <h3 id="common-issues-and-solutions">Common Issues and Solutions</h3>
 <h4 id="audio-transcription">Audio Transcription</h4>
@@ -1478,13 +1432,13 @@ Copyright (C) 2024 <strong><code>stata_codebook</code></strong></p>
 <div class="admonition quote">
 <p class="admonition-title">Citation</p>
 <p>If you use Stata Codebook in your research, please cite:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nc">@software</span><span class="p">{</span><span class="nl">stata_codebook2024</span><span class="p">,</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{AssumptionSheriff: A Python Package for Statistical Assumption Checking}</span><span class="p">,</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Mohsen Askar}</span><span class="p">,</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="na">e-mail</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{ceaser198511@gmail.com}</span><span class="p">,</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2024}</span><span class="p">,</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="na">url</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://pypi.org/project/stata_codebook/}</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nc">@software</span><span class="p">{</span><span class="nl">stata_codebook2024</span><span class="p">,</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{AssumptionSheriff: A Python Package for Statistical Assumption Checking}</span><span class="p">,</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Mohsen Askar}</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="na">e-mail</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{ceaser198511@gmail.com}</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2024}</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="na">url</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://pypi.org/project/stata_codebook/}</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span>
 </code></pre></div></p>
 </div>
 
