@@ -22,6 +22,11 @@ The application provides an end-to-end pipeline that handles:
 
 Audio2Topics bridges the gap between audio content and text analysis, making topic discovery accessible to researchers, content creators, analysts, and anyone who needs to identify key themes in audio materials.
 
+### Watch Audio2Topics video demo: 
+
+[![Watch the demo on YouTube](https://img.youtube.com/vi/iH60TOPLscY/maxresdefault.jpg)](https://youtu.be/iH60TOPLscY?si=yTcwpeMefXgRU625)
+
+
 
 ## Key Features
 
